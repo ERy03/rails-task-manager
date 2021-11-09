@@ -21,11 +21,13 @@
 .taskbox {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 10px 0;
+  font-size: 20px;
 }
 
 .taskbox a {
   text-decoration: none;
+  padding: 5px;
 }
 
 .taskbox p {

@@ -2,9 +2,9 @@
 <h1><%= @task.title %></h1>
 <p><%= @task.details %></p>
 <% if @task.completed == true %>
-<p>This task is completed</p>
+<i class="far fa-check-square"> This task is completed</i>
 <% else %>
-<p>This task is not completed yet</p>
+<i class="far fa-square"> This task is not completed yet</i>
 <% end %>
 <hr>
 <%= link_to 'Back to list', tasks_path, class:'btn btn-primary' %>
