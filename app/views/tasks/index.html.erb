@@ -6,12 +6,15 @@
       <p><%= task.completed %></p>
       <%# (task) is the id %>
       <p><%= link_to task.title, task_path(task) %></p>
+      <%= link_to task_path(task), method: :delete, data: { confirm: "Do you want to delete #{task.title}" } do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
     </div>
   <% end %>
 
   <hr>
 
-  <%= link_to 'Add a new task', task_new_path, class:'btn btn-primary' %>
+  <%= link_to 'Add a new task', new_task_path, class:'btn btn-primary' %>
 
 
 </div>
