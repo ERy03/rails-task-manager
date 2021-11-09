@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>My tasks</h1>
+
+
+    <% @tasks.each do |task| %>
+      <div class="taskbox">
+        <p><%= task.completed %></p>
+        <p><%= task.title %></p>
+      </div>
+    <% end %>
+</div>
