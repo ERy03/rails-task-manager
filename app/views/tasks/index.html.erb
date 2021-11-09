@@ -1,11 +1,17 @@
 <div class="container">
   <h1>My tasks</h1>
 
+  <% @tasks.each do |task| %>
+    <div class="taskbox">
+      <p><%= task.completed %></p>
+      <%# (task) is the id %>
+      <p><%= link_to task.title, task_path(task) %></p>
+    </div>
+  <% end %>
 
-    <% @tasks.each do |task| %>
-      <div class="taskbox">
-        <p><%= task.completed %></p>
-        <p><%= task.title %></p>
-      </div>
-    <% end %>
+  <hr>
+
+  <%= link_to 'Add a new task', task_new_path, class:'btn btn-primary' %>
+
+
 </div>

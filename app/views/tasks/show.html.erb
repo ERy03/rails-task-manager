@@ -1,0 +1,11 @@
+<div class="container">
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<% if @task.completed == true %>
+<p>This task is completed</p>
+<% else %>
+<p>This task is not completed yet</p>
+<% end %>
+<hr>
+<%= link_to 'Back to list', tasks_path, class:'btn btn-primary' %>
+</div>
