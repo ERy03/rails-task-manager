@@ -20,4 +20,9 @@
 
 .taskbox {
   display: flex;
+  align-items: center;
+}
+
+.taskbox a {
+  text-decoration: none;
 }
